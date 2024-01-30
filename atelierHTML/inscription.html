@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Inscription</title>
+
+</head>
+
+
+
+<body>
+
+   <header>
+   
+   
+    <nav>
+	<a href="acceuil.html"          target="_blank">Home</a>
+	<br>
+	
+	<a href="projet_tache.html" target="_blank" >Projet & Taches</a>
+	<br>
+	
+	<a href="liste_employes.html" target="_blank"  >Liste Employés</a>
+	<br>
+	
+	<a href="Inscription.html"   target="_blank"  >Inscription</a>
+	</nav>
+   <hr/> 
+   
+   </header>
+      
+   
+   <section align="center">
+    <img src="assests\img1.jpg" height="100%" width="50%" alt="banner">
+		<h1>Inscription Au Site </h1>
+	<form>
+	<table align="center">
+	<tr> <td> <label>Nom:   <span>*</span> </label> </td>  
+	<td><input placeholder="put a first name" type="text" name="Nom"   required minlength="2" title="Veuillez entrer un nom valide(lettres uniquement)" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+"   > </td>
+	 
+	</tr>
+	
+	<tr> <td> <label>Prenom:  <span>*</span>  </label></td>
+	<td> <input type="text" name="Prenom" required minlength="2" pattern="[A-Za-z]+"  ></td>
+	
+	</tr>
+	
+	<tr>
+	<td><label>Email:</label> </td>
+	<td> <input type="email" name="email" required   ></td>
+	
+	</tr>
+	
+	<tr>
+	<td> <label>Telephone:  <span>*</span>   </label></td>
+	<td> 
+	<input type="text" name="telephone" required  pattern="[0-9]{8}" ></td>
+
+	</tr>
+	
+	<tr>
+	<td> <label>Date De Naissance:</label></td>
+	<td> <input type="date" name="date" required   ></td>
+	</tr>
+	
+	<tr>
+	<td> <label>Mot De Passe:</label> </td>
+	<td> <input type="text" name="mdp"  required   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"  ></td>
+	</tr>
+	
+	<tr>
+	<td> <input type="submit" value="s'inscrire"> </td>
+	</tr>
+	
+	</table>
+
+	
+	</form>
+   </section>
+   
+
+   
+   
+   
+   
+   
+   <footer>
+   <hr>
+   
+   <p>Vous Pouvez Nous Contacter Par Email : <a href="mailto:contact@gmail"> contact@gmail.com </a></p>
+ 
+   <p>Adresse: Ghazela , Tunis</p>
+   
+   </footer>
+
+</body>
+
+
+
+</html>
+
+
+
