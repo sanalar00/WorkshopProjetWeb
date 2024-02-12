@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Accueil</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <br />
+      <nav>
+        <div>
+          <a href="accueil.html">Home</a>
+          <a href="projets_taches.html">Projets et tâches</a>
+          <a href="liste_employes.html">Liste employés</a>
+          <a href="inscription.html">Inscription</a>
+        </div>
+      </nav>
+      <br />
+      <hr />
+      <br />
+      <img
+        src="assests/img1.jpg"
+        width="100%"
+        height="500"
+        alt="Image d'accueil"
+      />
+    </header>
 
-<head>
+    <!-- Contenu de la page -->
+    <section>
+      <h1>Inscription au Site</h1>
+      <form  id="form">
+        <table>
+          <tr>
+            <td><label for="nom">Nom :</label></td>
+            <td>
+              <input
+                type="text"
+               id="nom"
+                name="nom"
+                
+              />
+            </td>
+            <td><span id="NameError"></span></td>
+             </tr>
+          <tr>
+            <td><label for="prenom">Prénom :</label></td>
+            <td>
+              <input
+                type="text"
+               id="prenom"
+                name="prenom"
+               
+              />
+            </td>
+           <td><span id="PrenomError"></span></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email :</label></td>
+            <td><input type="email" id="email"  name="email"  /></td>
+            
+          </tr>
+          <tr>
+            <td><label for="telephone">Téléphone :</label></td>
+            <td>
+              <input
+                type="text"
+                id="telephone"
+                name="telephone"
+               
+              />
+            </td>
+             <td><span id="telephoneError"></span></td>
+           </tr>
+          <tr>
+            <td><label for="date_naissance">Date de naissance :</label></td>
+            <td>
+              <input
+                type="date"
+                id="date_naissance"
+                name="date_naissance"
+                
 
-<title>Inscription</title>
+              />
+            </td>
+           </tr>
+          <tr>
+            <td><label for="password">Mot de passe:</label></td>
+            <td>
+              <input
+              type="password"
+              id="mot_de_passe"
+              name="password"
+               />
+            </td>
+             <td><span id="passError"></span></td>
+          </tr>
+        </table>
+        <input type="submit" value="S'inscrire"  />
+      </form>
+    </section>
 
-</head>
-
-
-
-<body>
-
-   <header>
-   
-   
-    <nav>
-	<a href="acceuil.html"          target="_blank">Home</a>
-	<br>
-	
-	<a href="projet_tache.html" target="_blank" >Projet & Taches</a>
-	<br>
-	
-	<a href="liste_employes.html" target="_blank"  >Liste Employés</a>
-	<br>
-	
-	<a href="Inscription.html"   target="_blank"  >Inscription</a>
-	</nav>
-   <hr/> 
-   
-   </header>
-      
-   
-   <section align="center">
-    <img src="assests\img1.jpg" height="100%" width="50%" alt="banner">
-		<h1>Inscription Au Site </h1>
-	<form>
-	<table align="center">
-	<tr> <td> <label>Nom:   <span>*</span> </label> </td>  
-	<td><input placeholder="put a first name" type="text" name="Nom"   required minlength="2" title="Veuillez entrer un nom valide(lettres uniquement)" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+"   > </td>
-	 
-	</tr>
-	
-	<tr> <td> <label>Prenom:  <span>*</span>  </label></td>
-	<td> <input type="text" name="Prenom" required minlength="2" pattern="[A-Za-z]+"  ></td>
-	
-	</tr>
-	
-	<tr>
-	<td><label>Email:</label> </td>
-	<td> <input type="email" name="email" required   ></td>
-	
-	</tr>
-	
-	<tr>
-	<td> <label>Telephone:  <span>*</span>   </label></td>
-	<td> 
-	<input type="text" name="telephone" required  pattern="[0-9]{8}" ></td>
-
-	</tr>
-	
-	<tr>
-	<td> <label>Date De Naissance:</label></td>
-	<td> <input type="date" name="date" required   ></td>
-	</tr>
-	
-	<tr>
-	<td> <label>Mot De Passe:</label> </td>
-	<td> <input type="text" name="mdp"  required   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"  ></td>
-	</tr>
-	
-	<tr>
-	<td> <input type="submit" value="s'inscrire"> </td>
-	</tr>
-	
-	</table>
-
-	
-	</form>
-   </section>
-   
-
-   
-   
-   
-   
-   
-   <footer>
-   <hr>
-   
-   <p>Vous Pouvez Nous Contacter Par Email : <a href="mailto:contact@gmail"> contact@gmail.com </a></p>
- 
-   <p>Adresse: Ghazela , Tunis</p>
-   
-   </footer>
-
-</body>
-
-
-
+    <!-- Footer -->
+    <br />
+    <hr />
+    <footer>
+      <p>
+        Vous pouvez nous contacter par email :
+        <a href="mailto:contact@esprit.tn">contact@esprit.tn</a>
+      </p>
+      <p>Adresse : Ghazela, Tunis</p>
+    </footer>
+    <script src="inscription.js" ></script>
+    
+  </body>
 </html>
-
-
-
