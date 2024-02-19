@@ -14,16 +14,17 @@ function validerDateOfBirth(){
 
 var formElement = document.getElementById("form") 
 var nameElement = document.getElementById("nom");
-var nameElement= document.getElementById("prenom")
-var nameElement= document.getElementById("telephone")
-var nameElement=document.getElementById("mot_de_passe")
+var prenomElement= document.getElementById("prenom")
+var telephoneElement= document.getElementById("telephone")
+var passElement=document.getElementById("mot_de_passe");
+
 formElement.addEventListener("submit", function(event){
     event.preventDefault()
     validateName()
     validatePrenom()
     validateTelephone()
 
-}
+});
 
 
 function validateName(){
@@ -40,19 +41,19 @@ function validateName(){
  
 function validatePrenom(){
     var NameValue = nameElement.value ;
+    var pattern = /^[a-z A-Z]+$/
     var nameError = document.getElementById("PrenomError")
-    if(prenom.length<1){
-          nameError.innerHTML=
+if(!NameValue.match(pattern)){          nameError.innerHTML=
     "<span style='color :red' > Prenom  doit avoir au moins 1 caractère </span>"
     }else {
         nameError.innerHTML= "<span style='color :green'>Correct</span>"
-    }
+    } }
 
 function validateTelephone() {
 var NameValue = nameElement.value ;
     var pattern = /^\d{8}$/
     var nameError = document.getElementById("telephoneError")
-    if(NameValue.match(pattern)){
+    if(!NameValue.match(pattern)){
           nameError.innerHTML=
     "<span style='color :red' > telephone ne doit pas contenir des lettres et doit conetenir 8 chiffres </span>"
     }else {
@@ -60,20 +61,33 @@ var NameValue = nameElement.value ;
     }
 }
 
-function validatePass {
+function validatePass() {
 
 var NameValue = nameElement.value ;
     var pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
     var nameError = document.getElementById("passError")
-    if(NameValue.match(pattern)){
-          nameError.innerHTML=
-    "<span style='color :red' > mot de passe doit contenir au moins 8 caractères incluant au moins un chiffre une  lettre minuscule et une lettre majuscule </span>"
+    if(!NameValue.match(pattern)){
+          nameError.innerHTML= "<span style='color :red' > mot de passe doit contenir au moins 8 caractères incluant au moins un chiffre une  lettre minuscule et une lettre majuscule </span>"
+    }else {
+        nameError.innerHTML= "<span style='color :green'>Correct</span>"
+    }}
+
+
+
+nameElement.addEventListener("keyup",function() {
+validateMail();
+
+})
+
+function validateMail() {
+var NameValue=nameElement.value;
+
+//var pattern= /^S+@esprit.tn$/ 
+var pattern= /^[a-z A-Z 0-9 _%.+-]+@esprit.tn$/
+    var nameError = document.getElementById("mailError")
+    if(!NameValue.match(pattern)){
+          nameError.innerHTML= "<span style='color :red' > veuillez entrer une adresse email valide </span>"
     }else {
         nameError.innerHTML= "<span style='color :green'>Correct</span>"
     }
-
-
 }
-
-
-

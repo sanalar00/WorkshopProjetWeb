@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+     
+    </header>
+
+
+
+
+
+<?php
+
+$donnees = array(
+    array("Nom", "Prenom", "Email", "Tel", "Adresse", "code_postal"),
+    array("Ben Mohamed", "Ahmed", "ahmed.benmohamed@gmail.com", "12345678", "147,Avenue de liberté,Tunis", 1000)
+    
+);
+?>
+
+
+
+
+
+    <!-- Contenu de la page -->
+    <section>
+    <form action="contact.php" method="get">
+
+        <table>
+          <tr>
+            <td><label for="nom">Nom :</label></td>
+            <td>
+              <input
+                type="text"
+               id="nom"
+                name="nom"
+                
+              />
+            </td>
+            
+             </tr>
+          <tr>
+            <td><label for="prenom">Prénom :</label></td>
+            <td>
+              <input
+                type="text"
+               id="prenom"
+                name="prenom"
+               
+              />
+            </td>
+          
+          </tr>
+          <tr>
+            <td><label for="email">Email :</label></td>
+            <td><input type="email" id="email"  name="email"   /></td>
+            
+          </tr>
+          <tr>
+            <td><label for="telephone">Téléphone :</label></td>
+            <td>
+              <input
+                type="text"
+                id="telephone"
+                name="telephone"
+               
+              />
+            </td>
+           
+           </tr>
+          <tr>
+            <td><label for="code_postal">code postal :</label></td>
+            <td>
+              <input
+                type="number"
+                name="code_postal"
+                
+
+              />
+            </td>
+           </tr>
+          
+        </table>
+        <input type="submit" value="Envoyer"  />
+		<input type="submit" value="Annuler"  />
+		
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <br />
+    <hr />
+    <footer>
+    
+    </footer>
+   
+    
+  </body>
+</html>
