@@ -1,0 +1,107 @@
+//html exercice.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h2>Formulaire</h2>
+    <form >
+        <table>
+            <tr>
+                <td><label for="nom">Nom:</label></td>
+                <td><input type="text" id="nom" name="nom" ></td>
+            </tr>
+            <tr>
+                <td><label for="prenom">Prénom:</label></td>
+                <td><input type="text" id="prenom" name="prenom"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="adresse">Adresse:</label></td>
+                <td><input type="text" id="adresse" name="adresse"></td>
+            </tr>
+            <tr>
+                <td><label for="code_postal">Code Postal:</label></td>
+                <td><input type="number" id="code_postal" name="code_postal"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Annuler</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+////contact.php
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+ 
+<body>
+    <?php
+    $testValue= false;
+    $champs= ['nom', 'prenom','email','adresse','code_postal'];
+    foreach($champs as $c) {
+        if(empty($_GET[$c]))
+        {
+            $testValue=true ;
+        }
+    }
+    if(!$testValue)  { ?>
+    <h2>Tableau</h2>
+ 
+    <table border="1">
+        <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Adresse</td>
+            <td>Email</td>
+            <td>Code postal</td>
+        </tr>
+        <tr>
+            <td> <?php echo   isset($_GET['nom']) ? $_GET['nom'] : ''    ?> </td>
+            <td> <?php
+             if(isset($_GET['prenom'])){
+                echo $_GET['prenom'] ;
+             } else {
+                echo '';
+             }
+             ?> </td>
+            <td> <?php echo isset($_GET['email']) ? $_GET['email'] : '' ?> </td>
+            <td> <?php echo isset($_GET['adresse'])  ? $_GET['adresse']  : '' ?> </td>
+            <td> <?php echo isset($_GET['code_postal']) ?  $_GET['code_postal'] : ''?> </td>
+        </tr>
+    </table>
+ 
+<?php } else {
+ 
+    echo '<p> champs manquants</p>';
+}
+?>
+ 
+</body>
+ 
+</html>
